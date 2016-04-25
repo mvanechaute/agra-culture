@@ -111,6 +111,11 @@ img {
 
 body {
     font-family: brandon-grotesque, helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
 }
 
 /* Header */
@@ -118,23 +123,56 @@ body {
 .main-header {
     background-color: hsla(60, 1%, 14%, 1.00);
     overflow: auto;
+    position: relative;
+    z-index: 150;
 }
 
-.main-header h2 {
+.main-header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-header a {
     color: white;
-    size: 50%;
+    text-transform: uppercase;
+    font-size: .5rem;
+    text-decoration: none;
 }
 
 .main-header .fa {
     color: white;
+    padding: 0 .5em;
 }
 
+.main-menu {
+    float: left;
+    margin: 3em;
+}
 
+.main-menu h2 {
+    display: inline-block;
+}
 
+.order {
+    float: right;
+    margin: 3em;
+    text-align: right;
+}
 
+.order h2 {
+    display: inline-block;
+}
 
+/* Jumbotron */
 
-
+.jumbotron {
+    max-height: 30em;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
 
 
 /* ==========================================================================
