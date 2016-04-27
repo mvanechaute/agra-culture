@@ -110,21 +110,29 @@ img {
 }
 
 body {
-    font-family: brandon-grotesque, helvetica, sans-serif;
-    line-height: 1.4;
+    line-height: 1.6;
+    font-family: chaparral-pro;
+    font-size: 110%;
 }
 
 h1, h2, h3, h4 {
+    font-family: brandon-grotesque, helvetica, sans-serif;
     text-transform: uppercase;
+    letter-spacing: .25rem;
 }
 
 /* Header */
 
 .main-header {
-    background-color: hsla(60, 1%, 14%, 1.00);
+    background-color: hsla(60, 1%, 14%, .95);
     overflow: auto;
     position: relative;
     z-index: 150;
+    height: 7em;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .main-header .logo {
@@ -146,32 +154,111 @@ h1, h2, h3, h4 {
     padding: 0 .5em;
 }
 
-.main-menu {
+.main-nav {
     float: left;
-    margin: 3em;
+    margin: 3em 2em 2em 3em;
 }
 
-.main-menu h2 {
+.main-nav h2 {
     display: inline-block;
+    font-weight: 400;
+    padding-bottom: .5em;
 }
 
-.order {
+.main-nav:hover h2 {
+    color: hsla(0,0%, 100%, .75);
+    transition: all .5s ease-out;
+}
+
+.main-nav:hover .fa {
+    color: hsla(0,0%, 100%, .75);
+    transition: all .5s ease-out;
+}
+
+.featured-nav {
     float: right;
-    margin: 3em;
+    margin: 2em 3em 2em 2em;
     text-align: right;
 }
 
-.order h2 {
+.featured-nav h2 {
     display: inline-block;
+    font-weight: 400;
+}
+
+.featured-nav:hover h2{
+    color: hsla(0,0%, 100%, .75);
+    transition: all .5s ease-out;
+}
+
+.featured-nav:hover .fa {
+    color: hsla(0,0%, 100%, .75);
+    transition: all .5s ease-out;
 }
 
 /* Jumbotron */
 
 .jumbotron {
-    max-height: 30em;
-    overflow: hidden;
+    width: 100%;
+    color: #fff;
+    text-shadow: 1px 1px 5px #555;
+}
+
+.jumbotron h1 {
+    line-height: 1.2;
+}
+
+.jumbotron_bg {
+    display: block;
     width: 100%;
     position: relative;
+    z-index: -50;
+}
+
+.jumbotron-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 75%;
+}
+
+.jumbotron-content .slideshow-icons {
+    margin-top: 2em;
+}
+
+.jumbotron-content .slideshow-icons i {
+    margin-right: .85em;
+    font-size: .85rem;
+}
+
+.slideshow-arrows {
+    position: absolute;
+    top: 50%;
+    width: 98%;
+}
+
+.slideshow-arrows .arrow-left {
+    left: 0;
+}
+
+.slideshow-arrows .arrow-right {
+    right: 0;
+}
+
+/* Button */
+
+.button {
+    color: #fff;
+    background-color: hsla(99, 41%, 42%, 1.00);
+    font-family: brandon-grotesque, helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    text-decoration: none;
+    font-size: .9rem;
+    padding: 1em 2.25em;
+    text-shadow: none;
 }
 
 
