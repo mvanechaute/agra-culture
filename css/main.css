@@ -121,6 +121,14 @@ h1, h2, h3, h4 {
     letter-spacing: .25rem;
 }
 
+h2 {
+    color: #252525;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Header */
 
 .main-header {
@@ -154,12 +162,15 @@ h1, h2, h3, h4 {
     padding: 0 .5em;
 }
 
+/* Menu Nav */
+
 .main-nav {
     float: left;
     margin: 3em 2em 2em 3em;
 }
 
 .main-nav h2 {
+    color: #fff;
     display: inline-block;
     font-weight: 400;
     padding-bottom: .5em;
@@ -175,6 +186,8 @@ h1, h2, h3, h4 {
     transition: all .5s ease-out;
 }
 
+/* Order Nav */
+
 .featured-nav {
     float: right;
     margin: 2em 3em 2em 2em;
@@ -182,8 +195,10 @@ h1, h2, h3, h4 {
 }
 
 .featured-nav h2 {
+    color: #fff;
     display: inline-block;
     font-weight: 400;
+    width: 50%;
 }
 
 .featured-nav:hover h2{
@@ -202,6 +217,10 @@ h1, h2, h3, h4 {
     width: 100%;
     color: #fff;
     text-shadow: 1px 1px 5px #555;
+    margin: 0;
+    position: relative;
+    max-height: 590px;
+    overflow: hidden;
 }
 
 .jumbotron h1 {
@@ -211,7 +230,6 @@ h1, h2, h3, h4 {
 .jumbotron_bg {
     display: block;
     width: 100%;
-    position: relative;
     z-index: -50;
 }
 
@@ -254,13 +272,156 @@ h1, h2, h3, h4 {
     background-color: hsla(99, 41%, 42%, 1.00);
     font-family: brandon-grotesque, helvetica, sans-serif;
     text-transform: uppercase;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-decoration: none;
     font-size: .9rem;
     padding: 1em 2.25em;
     text-shadow: none;
+    margin-top: .5em;
+    display: inline-block;
 }
 
+/* Main Paragraph */
+
+.main-paragraph {
+    background-image: url(../img/texture.jpg);
+    height: 500px;
+    position: relative;
+    background-size: cover;
+}
+
+.paragraph-wrapper {
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+blockquote h3 {
+    font-family: chaparral-pro, sans-serif;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 400;
+    color: hsla(99, 41%, 42%, 1.00);
+    margin: 0;
+}
+
+blockquote p {
+    color: #252525;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Large Grid Section */
+
+.paragraph-with-grid {
+    position: relative;
+    height: 700px;
+}
+
+.lg-grid-container {
+    width: 100%;
+    margin: 0 1em;
+    overflow: auto;
+}
+
+.lg-grid {
+    width: 30%;
+    float: left;
+    margin: 1em 1em 0 0;
+    position: relative;
+}
+
+.lg-grid:hover {
+    background-color:  ;
+}
+
+.lg-grid h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 5px #555;
+}
+
+.paragraph-with-grid {
+    position: relative;
+}
+
+.paragraph-with-grid .paragraph-wrapper {
+    top: 70%;
+}
+
+form {
+    display: inline-block;
+}
+
+/* Instagram Grid */
+
+.grid-wrapper {
+    margin: 1.5em;
+    width: 80%;
+}
+
+.sm-grid {
+    background-image: url(../img/texture.jpg);
+    height: 300px;
+}
+
+.sm-grid-image {
+    width: 15%;
+}
+
+/* Media */
+
+.media {
+    color: #fff;
+    text-align: center;
+    background-color: #252525;
+    height: 170px;
+}
+
+.media h3 {
+    font-size: 1rem;
+}
+
+.media-icons {
+    display: inline-block;
+    margin: 2em 0 0 0;
+}
+
+.media-icons i {
+    color: #252525;
+    background-image: url(../img/green-circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1em;
+}
+
+/* Footer */
+
+.main-footer {
+    color: #fff;
+    text-align: center;
+    height: 60px;
+    background-color: hsla(99, 41%, 42%, 1.00);
+}
+
+.main-footer p {
+    padding: 1.65em 0;
+    font-size: .75rem;
+    letter-spacing: 0.05rem;
+    background-image: url(../img/janky-farm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 17%;
+    margin-top: 0;
+}
 
 /* ==========================================================================
    Helper classes
