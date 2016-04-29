@@ -111,14 +111,16 @@ img {
 
 body {
     line-height: 1.6;
-    font-family: chaparral-pro;
+    font-family: "chaparral-pro";
+    font-weight: 300;
     font-size: 110%;
 }
 
 h1, h2, h3, h4 {
-    font-family: brandon-grotesque, helvetica, sans-serif;
+    font-family: "brandon-grotesque", helvetica, sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: .25rem;
+    letter-spacing: .15rem;
 }
 
 h2 {
@@ -129,11 +131,15 @@ a {
     text-decoration: none;
 }
 
+p {
+    color: #4D4D4D;
+    letter-spacing: 0.025rem;
+}
+
 /* Header */
 
 .main-header {
     background-color: hsla(60, 1%, 14%, .95);
-    overflow: auto;
     position: relative;
     z-index: 150;
     height: 7em;
@@ -166,14 +172,14 @@ a {
 
 .main-nav {
     float: left;
-    margin: 3em 2em 2em 3em;
+    margin: 2.5em 2em 2em 3em;
 }
 
 .main-nav h2 {
     color: #fff;
     display: inline-block;
     font-weight: 400;
-    padding-bottom: .5em;
+    margin-left: .5em;
 }
 
 .main-nav:hover h2 {
@@ -216,7 +222,7 @@ a {
 .jumbotron {
     width: 100%;
     color: #fff;
-    text-shadow: 1px 1px 5px #555;
+    text-shadow: 1px 1px 5px black;
     margin: 0;
     position: relative;
     max-height: 590px;
@@ -224,7 +230,9 @@ a {
 }
 
 .jumbotron h1 {
-    line-height: 1.2;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
 }
 
 .jumbotron_bg {
@@ -251,33 +259,19 @@ a {
     font-size: .85rem;
 }
 
-.slideshow-arrows {
-    position: absolute;
-    top: 50%;
-    width: 98%;
-}
-
-.slideshow-arrows .arrow-left {
-    left: 0;
-}
-
-.slideshow-arrows .arrow-right {
-    right: 0;
-}
-
 /* Button */
 
 .button {
     color: #fff;
     background-color: hsla(99, 41%, 42%, 1.00);
-    font-family: brandon-grotesque, helvetica, sans-serif;
+    font-family: "brandon-grotesque", helvetica, sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     text-decoration: none;
     font-size: .9rem;
-    padding: 1em 2.25em;
+    padding: .75em 2.25em;
     text-shadow: none;
-    margin-top: .5em;
     display: inline-block;
 }
 
@@ -299,19 +293,29 @@ a {
     text-align: center;
 }
 
+.paragraph-wrapper h2 {
+    margin-bottom: .5em;
+}
+
 blockquote h3 {
-    font-family: chaparral-pro, sans-serif;
-    text-transform: capitalize;
+    font-family: "chaparral-pro", sans-serif;
+    text-transform: none;
     font-style: italic;
-    font-weight: 400;
+    font-weight: 300;
     color: hsla(99, 41%, 42%, 1.00);
     margin: 0;
+    letter-spacing: 0.025rem;
+    font-size: 1.5rem;
 }
 
 blockquote p {
-    color: #252525;
-    text-transform: uppercase;
+    font-family: "brandon-grotesque", helvetica, sans-serif;
+    letter-spacing: 0.075rem;
+    font-weight: 700;
     font-size: 1rem;
+    color: #4D4D4D;
+    text-transform: uppercase;
+    font-size: 0.85rem;
     margin: 0;
 }
 
@@ -319,7 +323,7 @@ blockquote p {
 
 .paragraph-with-grid {
     position: relative;
-    height: 700px;
+    height: 55vw;
 }
 
 .lg-grid-container {
@@ -335,10 +339,6 @@ blockquote p {
     position: relative;
 }
 
-.lg-grid:hover {
-    background-color:  ;
-}
-
 .lg-grid h3 {
     position: absolute;
     top: 50%;
@@ -346,7 +346,24 @@ blockquote p {
     transform: translate(-50%, -50%);
     margin: 0;
     color: #fff;
-    text-shadow: 1px 1px 5px #555;
+    text-shadow: 1px 1px 5px black;
+    visibility: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+.lg-grid:hover {
+    background-color: hsla(0,0%,0%,0.5);
+}
+
+.lg-grid:hover h3 {
+    visibility: visible;
+}
+
+.lg-grid-image {
+    position: relative;
+    display: block;
+    z-index: -10;
 }
 
 .paragraph-with-grid {
@@ -355,6 +372,7 @@ blockquote p {
 
 .paragraph-with-grid .paragraph-wrapper {
     top: 70%;
+    width: 700px;
 }
 
 form {
@@ -363,18 +381,41 @@ form {
 
 /* Instagram Grid */
 
-.grid-wrapper {
-    margin: 1.5em;
-    width: 80%;
-}
-
 .sm-grid {
     background-image: url(../img/texture.jpg);
-    height: 300px;
+    height: 310px;
+    padding: 1em 0 0 3em;
+}
+
+.grid-wrapper {
+    width: 100%;
+}
+
+.grid-wrapper a:hover {
+    background-color: hsla(0,0%,100%,0.25);
+    transition: all .5s ease-out;
 }
 
 .sm-grid-image {
-    width: 15%;
+    width: 15.5%;
+    display: inline-block;
+}
+
+.sm-grid h4 a{
+    font-family: "chaparral-pro", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    text-transform: none;
+    color: hsla(99, 41%, 42%, 1.00);
+    letter-spacing: 0.025rem;
+    font-size: .85rem;
+}
+
+/* Form */
+
+input[type="text"] {
+    background-color: #EAE7DE;
+    padding: .5em;
 }
 
 /* Media */
@@ -387,7 +428,7 @@ form {
 }
 
 .media h3 {
-    font-size: 1rem;
+    font-size: .85rem;
 }
 
 .media-icons {
@@ -413,14 +454,16 @@ form {
 }
 
 .main-footer p {
-    padding: 1.65em 0;
-    font-size: .75rem;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 1.45rem;
+    font-size: .8rem;
     letter-spacing: 0.05rem;
     background-image: url(../img/janky-farm.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 17%;
-    margin-top: 0;
+    background-size: 10%;
+    margin: 0;
 }
 
 /* ==========================================================================
