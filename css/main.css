@@ -120,7 +120,7 @@ h1, h2, h3, h4 {
     font-family: "brandon-grotesque", helvetica, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: .15rem;
+    letter-spacing: .13rem;
 }
 
 h2 {
@@ -140,7 +140,6 @@ p {
 
 .main-header {
     background-color: hsla(60, 1%, 14%, .95);
-    position: relative;
     z-index: 150;
     height: 7em;
     width: 100%;
@@ -160,43 +159,45 @@ p {
     color: white;
     text-transform: uppercase;
     font-size: .5rem;
-    text-decoration: none;
 }
 
 .main-header .fa {
     color: white;
     padding: 0 .5em;
+    transition: all .5s ease-out;
 }
 
 /* Menu Nav */
 
 .main-nav {
-    float: left;
-    margin: 2.5em 2em 2em 3em;
+    position: absolute;  
+    top: 33%;
+    left: 5%;  
+    transition: all .5s ease-out;
 }
 
 .main-nav h2 {
     color: #fff;
     display: inline-block;
     font-weight: 400;
-    margin-left: .5em;
+    margin-left: 1em;
 }
 
-.main-nav:hover h2 {
-    color: hsla(0,0%, 100%, .75);
+.main-nav:hover{
+    opacity: .75;
     transition: all .5s ease-out;
 }
 
-.main-nav:hover .fa {
-    color: hsla(0,0%, 100%, .75);
-    transition: all .5s ease-out;
+.main-nav img {
+    width: 38%;
 }
 
 /* Order Nav */
 
 .featured-nav {
-    float: right;
-    margin: 2em 3em 2em 2em;
+    position: absolute;  
+    top: 25%;
+    right: 3%;  
     text-align: right;
 }
 
@@ -205,6 +206,11 @@ p {
     display: inline-block;
     font-weight: 400;
     width: 50%;
+    transition: all .5s ease-out;
+}
+
+.featured-nav .fa {
+    vertical-align: 20%;
 }
 
 .featured-nav:hover h2{
@@ -231,7 +237,7 @@ p {
 
 .jumbotron h1 {
     line-height: 1.5;
-    font-size: 2rem;
+    font-size: 3vw;
     margin-bottom: 0.5em;
 }
 
@@ -243,7 +249,7 @@ p {
 
 .jumbotron-content {
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -251,12 +257,16 @@ p {
 }
 
 .jumbotron-content .slideshow-icons {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 .jumbotron-content .slideshow-icons i {
     margin-right: .85em;
     font-size: .85rem;
+}
+
+.jumbotron-content .slideshow-icons a {
+    color: #fff;
 }
 
 /* Button */
@@ -268,24 +278,58 @@ p {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    text-decoration: none;
     font-size: .9rem;
     padding: .75em 2.25em;
     text-shadow: none;
     display: inline-block;
+    margin-top: .5em;
+}
+
+/* Arrows */
+
+.direction-left {
+    float: left;
+    position: absolute;
+    top: 47%;
+    left: 1%;
+    opacity: .5;
+    transition: all .5s ease-out;
+}
+
+.direction-left:hover {
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+
+.direction-right {
+    float: right;
+    position: absolute;
+    top: 47%;
+    right: 1%;
+    opacity: .5;
+    transition: all .5s ease-out;
+}
+
+.direction-right:hover {
+    opacity: 1;
+    transition: all .5s ease-out;
 }
 
 /* Main Paragraph */
 
-.main-paragraph {
+.paragraph-background {
     background-image: url(../img/texture.jpg);
-    height: 500px;
     position: relative;
     background-size: cover;
+    height: 28em;
+}
+
+.paragraph-background h2 {
+    margin: 0;
 }
 
 .paragraph-wrapper {
-    width: 500px;
+    width: 30em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -295,6 +339,10 @@ p {
 
 .paragraph-wrapper h2 {
     margin-bottom: .5em;
+}
+
+blockquote {
+    margin: 0;
 }
 
 blockquote h3 {
@@ -321,21 +369,22 @@ blockquote p {
 
 /* Large Grid Section */
 
-.paragraph-with-grid {
+.lg-grid-section {
     position: relative;
-    height: 55vw;
+    overflow: auto;
 }
 
 .lg-grid-container {
     width: 100%;
-    margin: 0 1em;
+    margin: 0;
     overflow: auto;
+    padding: .75vw 0 0 .75vw;
 }
 
 .lg-grid {
-    width: 30%;
-    float: left;
-    margin: 1em 1em 0 0;
+    width: 32.25%;
+    display: inline-block;
+    margin-right: .5vw;
     position: relative;
 }
 
@@ -350,6 +399,11 @@ blockquote p {
     visibility: hidden;
     width: 100%;
     text-align: center;
+    font-size: 2.25vw;
+}
+
+.lg-grid img {
+    width: 100%;
 }
 
 .lg-grid:hover {
@@ -364,44 +418,66 @@ blockquote p {
     position: relative;
     display: block;
     z-index: -10;
+    width: 100%;
 }
 
-.paragraph-with-grid {
+/* Paragraph */
+
+.paragraph {
     position: relative;
+    height: 25em;
+    overflow: auto;
 }
 
-.paragraph-with-grid .paragraph-wrapper {
-    top: 70%;
-    width: 700px;
+.paragraph .paragraph-wrapper {
+    width: 80vw;
 }
 
 form {
     display: inline-block;
+    margin-bottom: 1em;
+}
+
+.input {
+    font-family: "chaparral-pro", serif;
 }
 
 /* Instagram Grid */
 
-.sm-grid {
+.sm-grid-section {
     background-image: url(../img/texture.jpg);
-    height: 310px;
-    padding: 1em 0 0 3em;
-}
-
-.grid-wrapper {
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 100%;
+    padding: 1em 0 3em 4em;
+    overflow: auto;
 }
 
-.grid-wrapper a:hover {
-    background-color: hsla(0,0%,100%,0.25);
-    transition: all .5s ease-out;
+.sm-grid-container {
+    width: 95%;
+    overflow: auto;
 }
 
 .sm-grid-image {
-    width: 15.5%;
-    display: inline-block;
+    display: block;
+    position: relative;
+    width: 100%;
+    transition: all .5s ease-out;
 }
 
-.sm-grid h4 a{
+.sm-grid {
+    width: 15.75%;
+    float: left;
+    margin: 0 .15em 0 0;
+    background-color: #fff;
+}
+
+.sm-grid-image:hover {
+    opacity: .9;
+    transition: all .5s ease-out;
+}
+
+.sm-grid-section h4 a{
     font-family: "chaparral-pro", sans-serif;
     font-style: italic;
     font-weight: 300;
@@ -410,6 +486,7 @@ form {
     letter-spacing: 0.025rem;
     font-size: .85rem;
 }
+
 
 /* Form */
 
@@ -423,7 +500,7 @@ input[type="text"] {
 .media {
     color: #fff;
     text-align: center;
-    background-color: #252525;
+    background-image: url(../img/dust_gray.png);
     height: 170px;
 }
 
@@ -441,7 +518,7 @@ input[type="text"] {
     background-image: url(../img/green-circle.png);
     background-repeat: no-repeat;
     background-position: center;
-    padding: 1em;
+    padding: .9em;
 }
 
 /* Footer */
@@ -449,20 +526,18 @@ input[type="text"] {
 .main-footer {
     color: #fff;
     text-align: center;
-    height: 60px;
     background-color: hsla(99, 41%, 42%, 1.00);
 }
 
 .main-footer p {
     color: #fff;
-    font-weight: 300;
-    padding-top: 1.45rem;
+    padding: 1.3rem 0;
     font-size: .8rem;
     letter-spacing: 0.05rem;
     background-image: url(../img/janky-farm.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 10%;
+    background-size: 15%;
     margin: 0;
 }
 
