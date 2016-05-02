@@ -283,6 +283,13 @@ p {
     text-shadow: none;
     display: inline-block;
     margin-top: .5em;
+    transition: all .5s ease-out;
+
+}
+
+.button:hover {
+    background-color: #4E7F34;
+    transition: all .5s ease-out;    
 }
 
 /* Arrows */
@@ -367,7 +374,7 @@ blockquote p {
     margin: 0;
 }
 
-/* Large Grid Section */
+/* Large Grid */
 
 .lg-grid-section {
     position: relative;
@@ -421,7 +428,7 @@ blockquote p {
     width: 100%;
 }
 
-/* Paragraph */
+/* Paragraph Section */
 
 .paragraph {
     position: relative;
@@ -432,6 +439,8 @@ blockquote p {
 .paragraph .paragraph-wrapper {
     width: 80vw;
 }
+
+/* Form */
 
 form {
     display: inline-block;
@@ -458,18 +467,18 @@ form {
     overflow: auto;
 }
 
-.sm-grid-image {
-    display: block;
-    position: relative;
-    width: 100%;
-    transition: all .5s ease-out;
-}
-
 .sm-grid {
     width: 15.75%;
     float: left;
     margin: 0 .15em 0 0;
     background-color: #fff;
+}
+
+.sm-grid-image {
+    display: block;
+    position: relative;
+    width: 100%;
+    transition: all .5s ease-out;
 }
 
 .sm-grid-image:hover {
@@ -501,11 +510,11 @@ input[type="text"] {
     color: #fff;
     text-align: center;
     background-image: url(../img/dust_gray.png);
-    height: 170px;
+    height: 10em;
 }
 
 .media h3 {
-    font-size: .85rem;
+    font-size: 1rem;
 }
 
 .media-icons {
@@ -519,6 +528,12 @@ input[type="text"] {
     background-repeat: no-repeat;
     background-position: center;
     padding: .9em;
+    transition: all .5s ease-out;
+}
+
+.media-icons i:hover {
+    opacity: .6;
+    transition: all .5s ease-out;
 }
 
 /* Footer */
